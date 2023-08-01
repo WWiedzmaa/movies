@@ -3,8 +3,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Movies from "./pages/Movies";
-import Serial from "./pages/Serial";
-import Person from "./pages/Person";
+import Serials from "./pages/Serials";
+import Persons from "./pages/Persons";
 import UserProfile from "./pages/UserProfile";
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<Movies />} />
-          <Route path="/serials" element={<Serial />} />
-          <Route path="/person" element={<Person />} />
+          <Route path="/serials" element={<Serials />} />
+          <Route path="/persons" element={<Persons />} />
           <Route path="/userprofile" element={<UserProfile />} />
         </Routes>
       </BrowserRouter>
