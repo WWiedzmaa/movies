@@ -4,23 +4,19 @@
 import { styled } from "styled-components";
 
 export const Button = styled.button`
-  border-radius: ;
-  border-color: ;
-  background-color: ${({ isSecondary }) =>
-    isSecondary ? "transparent" : "blueviolet"};
-  border: ;
-  color: ${(props) => (props.isSecondary ? "blueviolet" : "white")};
-  transition: ;
+  font-size: 16px;
+  border-radius: 100px;
+  background-color: #0a66c2;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 7px 20px;
   &:hover {
-    background-color: transparent;
-    color: blueviolet;
+    background-color: #16437e;
+    color: white;
   }
   &:active {
     opacity: 0.7;
-    color: red;
-  }
-  @media (mex-width: 768px) {
-    background-color: gold;
-    color: black;
+    color: white;
   }
 `;
