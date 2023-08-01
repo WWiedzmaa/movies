@@ -1,6 +1,3 @@
-//UWAGA!
-//Plik do zmiany atrybuty pozostawione jako wzór. Po zmianie usunąć komentarz.
-
 import { styled } from "styled-components";
 
 export const Button = styled.button`

@@ -3,7 +3,7 @@
 import { styled } from "styled-components";
 
 export const Tab = styled.h3`
-  background-color: ;
-  color: ;
-  border-radius: ;
+  background-color: white;
+  color: black;
+  font-size: 25px;
 `;
