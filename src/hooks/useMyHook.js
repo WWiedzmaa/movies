@@ -2,9 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-const url =
-  "https://api.themoviedb.org/3/person/changes?api_key=5219cb6186dc8cdfa863dcdc035f17f8";
-
 const useMyHook = (url) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -17,7 +14,7 @@ const useMyHook = (url) => {
   const getData = async () => {
     setLoading(true);
     try {
-      const response = await fetch(url);
+      const response = await fetch(url+'?api_key=5219cb6186dc8cdfa863dcdc035f17f8');
       if (!response.ok) {
         setError("Nie udało się pobrać danych");
       }

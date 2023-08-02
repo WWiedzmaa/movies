@@ -53,9 +53,9 @@
     outline: none;
 }
 
-/* .input ::placeholder{    jeśli ktoś ma  pomysł jak zmienić kolor tego pleaceholdera  proszę zróbcie to :D
+.input::placeholder{ 
     color:rgb(50, 38, 83) !important;
-} */
+}
 
 .input:hover {
     border: solid 1px rgb(50 38 83 / 80%);
