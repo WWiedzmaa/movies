@@ -14,25 +14,28 @@ import NewFilm from "./pages/Footers/NewFilm";
 import NewSerials from './pages/Footers/NewSerials';
 import TermsAndConditions from "./pages/Footers/TermsAndConditions";
 import PrivacyPolitycy from "./pages/Footers/PrivacyPolitycy";
+import "./index.css"
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/serials" element={<Serials />} />
-          <Route path="/persons" element={<Persons />} />
-          <Route path="/userprofile" element={<UserProfile />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/newFilm" element={<NewFilm />} />
-          <Route path="/newSerials" element={<NewSerials />} />
-          <Route path="/termsAndConditions" element={<TermsAndConditions />} />
-          <Route path="/privacyPolicy" element={<PrivacyPolitycy />} />
-        </Routes>
+        <div className="middle">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/movies" element={<Movies />} />
+            <Route path="/serials" element={<Serials />} />
+            <Route path="/persons" element={<Persons />} />
+            <Route path="/userprofile" element={<UserProfile />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/newFilm" element={<NewFilm />} />
+            <Route path="/newSerials" element={<NewSerials />} />
+            <Route path="/termsAndConditions" element={<TermsAndConditions />} />
+            <Route path="/privacyPolicy" element={<PrivacyPolitycy />} />
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </div>
