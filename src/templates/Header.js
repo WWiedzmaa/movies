@@ -33,7 +33,7 @@ console.log(data.id);
   return (
     
     <div className={styles.root}>
-    <div> {data.map((name)=>( <div key={name.id} > <Link to="/"> {name.id}</Link>  </div>))} </div>
+    <div> {data.map((name)=>( <div key={name.id} > <Link to="/"> {name.id}</Link>  </div>))}  </div>
       <CameraRollIcon /> <span className={styles.span}>Movies</span>
       <div className={styles.links}>
         <Link to={""} className={styles.link}>Home Page</Link>
