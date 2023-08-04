@@ -5,11 +5,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 const CardSerial = ({ serial }) => {
-  console.log(serial);
+  // console.log(serial);
   return (
-    <Card>
+    <Card  sx={{ maxWidth: 345 }}>
       <CardMedia
-        // sx={{ height: 140 }}
+        sx={{ height: 140 }}
         image={`https://image.tmdb.org/t/p/w500/${serial.poster_path}`}
 />
       <CardContent>
