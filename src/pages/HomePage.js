@@ -6,7 +6,6 @@ const HomePage = () => {
   const {data, loading, error} = useMyHook(
     "https://api.themoviedb.org/3/person/changes"
   );
-  console.log(data);
   return <div></div>;
 };
 

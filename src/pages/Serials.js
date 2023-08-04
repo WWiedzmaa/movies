@@ -8,6 +8,7 @@ const Serials = () => {
   const { data: dataAiring, loading: loadingAiring, error: errorAiring } = useMyHook("https://api.themoviedb.org/3/tv/airing_today");
   const { data: dataTop, loading: loadingTop, error: errorTop } = useMyHook("https://api.themoviedb.org/3/tv/top_rated");
 
+
   return (
     <div>
       <div className={styles.h3}>Popular </div>
