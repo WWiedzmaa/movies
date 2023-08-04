@@ -1,6 +1,6 @@
 import React from "react";
 import useMyHook from "./../hooks/useMyHook";
-import CardPersons from "./CardPersons";
+import CardPersons from "../components/persons/CardPersons";
 
 const Person = () => {
   const { data, loading, error } = useMyHook(
