@@ -3,7 +3,7 @@ import useMyHook from "./../hooks/useMyHook";
 import CardPersons from "../components/persons/CardPersons";
 
 const Person = () => {
-  const { data, loading, error } = useMyHook(
+  const { data, loading } = useMyHook(
     "https://api.themoviedb.org/3/person/popular"
   );
 
