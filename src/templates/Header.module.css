@@ -72,3 +72,11 @@
     margin-right: 30px;
     margin-left: 2px;
 }
+.list{
+    position: relative;
+}
+.listAbsolut{
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
