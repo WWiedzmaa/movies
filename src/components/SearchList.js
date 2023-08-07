@@ -10,14 +10,16 @@ import Typography from '@mui/material/Typography';
 export default function SearchList({ value }) {
     console.log(value);
     return (
-        <List>
+        <List style={{position:"absolute", top : "0", backgroundColor: "lightgrey", 
+        zIndex:"1000"}}>
             {value.map((list) => (
                 <ListItem>
                     <ListItemAvatar>
                         {/* <Avatar alt="Remy Sharp" src={`https://image.tmdb.org/t/p/w500/${serial.poster_path}`} /> */}
                     </ListItemAvatar>
                     <ListItemText>
-                    {list.name}
+                    {list.name ?? list.title}
+                    <Divider/>
                     </ListItemText>
                 </ListItem>
             ))
