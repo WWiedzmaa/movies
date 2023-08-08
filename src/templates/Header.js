@@ -20,13 +20,19 @@ const Header = () => {
       const response = await fetch(
         `https://api.themoviedb.org/3/search/multi?api_key=5219cb6186dc8cdfa863dcdc035f17f8&query=${query}&page=1`
       );
-      console.log(response);
+      // console.log(response);
       const result = await response.json();
       setData(result.results);
     } catch (error) {
       setError("Nie udało się pobrać danych");
     }
   };
+
+const clean = ()=>{
+  setData([]);
+  setQuery("");
+  
+}
   return (
     <div className={styles.root}>
       <CameraRollIcon /> <span className={styles.span}>Movies</span>
@@ -58,7 +64,7 @@ const Header = () => {
           <SearchIcon />
         </p>
         <div className={styles.listAbsolut}>
-        <SearchList value={data} />
+        <SearchList clean={clean} value={data} />
         </div>
       </div>
       

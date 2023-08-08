@@ -15,11 +15,11 @@ const Serials = () => {
       <div className={styles.main}>
         {!loadingPopular && dataPopular.results.map((serial) => <CardSerial serial={serial} key={serial.id} />)}
       </div>
-      <div>Grane </div>
+      <div className={styles.h3}>Airning </div>
       <div className={styles.main}>
         {!loadingAiring && dataAiring.results.map((serial) => <CardSerial serial={serial} key={serial.id} />)}
       </div>
-      <div>Top </div>
+      <div className={styles.h3}> Top </div>
       <div className={styles.main}>
         {!loadingTop && dataTop.results.map((serial) => <CardSerial serial={serial} key={serial.id} />)}
       </div>

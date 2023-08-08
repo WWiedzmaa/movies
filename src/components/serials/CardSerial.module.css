@@ -1,0 +1,22 @@
+.main{
+    width: 200px;
+    height: 300px;
+    margin: 10px 10px;
+}
+.text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .name{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold ;
+  }
+  .link{
+    text-decoration: none;
+  }
+  .link:hover{
+    transform: scale(1.03);
+  }

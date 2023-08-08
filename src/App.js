@@ -15,7 +15,7 @@ import NewSerials from './pages/Footers/NewSerials';
 import TermsAndConditions from "./pages/Footers/TermsAndConditions";
 import PrivacyPolitycy from "./pages/Footers/PrivacyPolitycy";
 import "./index.css"
-import SearchResoult from "./pages/Footers/SearchResoult";
+import SearchResoult from "./pages/SearchResoult";
 
 function App() {
   return (
