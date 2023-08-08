@@ -1,0 +1,16 @@
+.list {
+  display: flex;
+  width: 300px;
+  background-color: rgba(126, 99, 199, 0.925);;
+}
+.link {
+  text-decoration: none;
+  color: black !important;
+}
+.link:hover{
+    transform: scale(1.03);
+}
+.link span{
+    font-size: 15px;
+    font-weight: 550;
+}

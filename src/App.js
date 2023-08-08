@@ -15,6 +15,7 @@ import NewSerials from './pages/Footers/NewSerials';
 import TermsAndConditions from "./pages/Footers/TermsAndConditions";
 import PrivacyPolitycy from "./pages/Footers/PrivacyPolitycy";
 import "./index.css"
+import SearchResoult from "./pages/SearchResoult";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/newSerials" element={<NewSerials />} />
             <Route path="/termsAndConditions" element={<TermsAndConditions />} />
             <Route path="/privacyPolicy" element={<PrivacyPolitycy />} />
+            <Route path="/serch/:id" element={<SearchResoult />} />
           </Routes>
         </div>
         <Footer />
