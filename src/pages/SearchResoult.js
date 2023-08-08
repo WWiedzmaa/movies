@@ -14,7 +14,7 @@ const SearchResoult = () => {
     <div>
       <div className={styles.root}>{obj.name ?? obj.title}</div>
       <div className={styles.main}>
-        <img src={`https://image.tmdb.org/t/p/w500/${obj.backdrop_path}`} />
+        <img src={`https://image.tmdb.org/t/p/w500/${obj.backdrop_path ?? obj.profile_path}`} />
         <div className={styles.text}>
         <div>
             <span>Type:</span> {obj.media_type}
