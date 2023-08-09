@@ -28,14 +28,17 @@ const Header = () => {
     }
   };
 
-const clean = ()=>{
-  setData([]);
-  setQuery("");
-  
-}
+  const clean = () => {
+    setData([]);
+    setQuery("");
+  };
   return (
     <div className={styles.root}>
-      <CameraRollIcon /> <span className={styles.span}>Movies</span>
+      <div className={styles.logo}>
+        <Link to="/">
+          <CameraRollIcon /> <div className={styles.span}>Movies</div>
+        </Link>
+      </div>
       <div className={styles.links}>
         <Link to={""} className={styles.link}>
           Home Page
@@ -64,10 +67,9 @@ const clean = ()=>{
           <SearchIcon />
         </p>
         <div className={styles.listAbsolut}>
-        <SearchList clean={clean} value={data} />
+          <SearchList clean={clean} value={data} />
         </div>
       </div>
-      
     </div>
   );
 };
