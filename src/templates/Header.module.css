@@ -21,7 +21,6 @@
   align-items: center;
 }
 
-
 .links {
   display: flex;
   font-size: 25px;
@@ -86,11 +85,11 @@
   bottom: 0;
   width: 100%;
 }
-.logo a { 
+.logo a {
   display: flex;
-  text-decoration: none;  
+  text-decoration: none;
 }
-.logo a:hover{
-  transform: scale(1.2);
+.logo a:hover {
+  transform: scale(1.19);
   opacity: 0.7;
 }
