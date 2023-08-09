@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import CameraRollIcon from "@mui/icons-material/CameraRoll";
@@ -11,8 +11,25 @@ const Header = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
 
+  const [isVisible, setIsVisible] = useState(true); // kliknięcie na zwenątrz - stan
+  const myRef = useRef(); // referencja do przycisku - button
+
+  // czy klikamy w obszar referenacji
+  const handleClickOutside = (e) => {
+    console.log(e);
+    if (!myRef.current.contains(e.target)) {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [myRef]);
+
   useEffect(() => {
     getData();
+    setIsVisible(true);
   }, [query]);
 
   const getData = async () => {
@@ -56,8 +73,9 @@ const Header = () => {
           User Profile
         </Link>
       </div>
-      <div className={styles.list}>
+      <div ref={myRef} className={styles.list}>
         <Input
+          onClick={() => setIsVisible(true)}
           placeholder="szukaj"
           onChange={(e) => setQuery(e.target.value)}
           value={query}
@@ -66,9 +84,11 @@ const Header = () => {
         <p className={styles.search}>
           <SearchIcon />
         </p>
-        <div className={styles.listAbsolut}>
-          <SearchList clean={clean} value={data} />
-        </div>
+        {isVisible && (
+          <div className={styles.listAbsolut}>
+            <SearchList clean={clean} value={data} />
+          </div>
+        )}
       </div>
     </div>
   );
