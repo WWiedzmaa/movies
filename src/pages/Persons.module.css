@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.h3 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgba(31, 13, 53, 0.767);
+}
