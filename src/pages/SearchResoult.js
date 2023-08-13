@@ -3,8 +3,8 @@ import { useLocation, useParams } from "react-router-dom";
 import styles from "./SearchResoult.module.css";
 
 const SearchResoult = () => {
-  const params = useParams();
-  const id = params.id.replace(/\D/g, "");
+  // const params = useParams();
+  // const id = params.id.replace(/\D/g, "");
 
   const location = useLocation();
   const { obj } = location.state;
