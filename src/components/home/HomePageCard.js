@@ -32,7 +32,6 @@ const HomePageCard = ({ trend }) => {
         break;
     }
   }
-
   return (
     <div className={styles.root}>
       <Link
@@ -40,8 +39,9 @@ const HomePageCard = ({ trend }) => {
           trend.id + "-" + (trend.name ?? trend.title)?.replaceAll(" ", "-")
         }`}
         state={{ obj: trend }}
+        className={styles.link}
       >
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, height:300 }}>
           <CardMedia
             sx={{ height: 140, width: 200 }}
             image={`https://image.tmdb.org/t/p/w500/${
@@ -49,11 +49,11 @@ const HomePageCard = ({ trend }) => {
             }`}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography gutterBottom variant="h5" component="div" className={styles.name}>
               {trend.name ?? trend.title}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              <span>{detals()}</span>
+              <span className={styles.text}>{detals()}</span>
             </Typography>
           </CardContent>
         </Card>
