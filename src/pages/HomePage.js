@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import HomePageCard from "../components/home/HomePageCard";
 import ApiUtil from "./../hooks/ApiUtil";
 import styles from "./HomePage.module.css";
+import SwiperCard from "../components/SwiperCard";
 
 const HomePage = () => {
   const [all, setAll] = useState(null);
@@ -36,29 +37,29 @@ const HomePage = () => {
   return (
     <div className={styles.root}>
       <div className={styles.category}> All</div>
-      <div>
+      <SwiperCard>
         {all?.results?.map((all) => (
           <HomePageCard key={all.id} trend={all} />
         ))}
-      </div>
+      </SwiperCard>
       <div className={styles.category}> Movie</div>
-      <div>
+      <SwiperCard>
         {trendMovie?.results?.map((all) => (
           <HomePageCard key={all.id} trend={trendMovie} />
         ))}
-      </div>
+      </SwiperCard>
       <div className={styles.category}> Serial</div>
-      <div>
+      <SwiperCard>
         {trendSerial?.results?.map((all) => (
           <HomePageCard key={all.id} trend={trendSerial} />
         ))}
-      </div>
+      </SwiperCard>
       <div className={styles.category}> People</div>
-      <div>
+      <SwiperCard>
         {trendPeople?.results?.map((all) => (
           <HomePageCard key={all.id} trend={trendPeople} />
         ))}
-      </div>
+      </SwiperCard>
     </div>
   );
 };
