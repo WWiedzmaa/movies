@@ -3,23 +3,52 @@
   flex-direction: column;
 }
 
-.img {
-  max-width: 40%;
-  max-height: 40%;
-}
+
 
 .photo {
   display: flex;
   flex-direction: row-reverse;
+}
+.photo img{
+width: 700px;
+border-radius: 7px;
 }
 
 .name {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 30px;
+    font-weight: bold;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: rgba(31, 13, 53, 0.767);
 }
-
+.films h2{
+  font-size: 30px;
+  font-weight: bold;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: rgba(31, 13, 53, 0.767); 
+}
 .films {
   display: flex;
   flex-direction: column;
 }
+.main{
+  display: flex;
+}
+
+.position{
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.card{
+  margin: 10px;
+}
+.card h5{
+  font-size: 30px;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgba(31, 13, 53, 0.767); 
+}
+

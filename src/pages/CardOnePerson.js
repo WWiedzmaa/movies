@@ -21,64 +21,68 @@ export const CardOnePerson = () => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.photo}>
-        <img
-          className={styles.img}
-          src={`https://image.tmdb.org/t/p/w500/${obj.profile_path}`}
-          alt="people"
-        />
-      </div>
-      <div className={styles.name}>
-        <h1>{obj.name}</h1>
-      </div>
-      <div className={styles.films}>
-        <h2>Znana/y z: </h2>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={`https://image.tmdb.org/t/p/w500/${img[0]}`}
-              alt="photo1"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {title[0]}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+      <div className={styles.main}>
+        <div className={styles.photo}>
+          <img
+            className={styles.img}
+            src={`https://image.tmdb.org/t/p/w500/${obj.profile_path}`}
+            alt="people"
+          />
+        </div>
+        <div className={styles.position}>
+          <div className={styles.name}>
+            <h1>{obj.name}</h1>
+          </div>
+          <div className={styles.films}>
+            <h2>Znana/y z: </h2>
+            <Card sx={{ maxWidth: 345 }}className={styles.card}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={`https://image.tmdb.org/t/p/w500/${img[0]}`}
+                  alt="photo1"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" >
+                    {title[0]}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
 
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={`https://image.tmdb.org/t/p/w500/${img[1]}`}
-              alt="photo1"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {title[1]}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ maxWidth: 345 }}>
-          <CardActionArea>
-            <CardMedia
-              component="img"
-              height="140"
-              image={`https://image.tmdb.org/t/p/w500/${img[2]}`}
-              alt="photo1"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {title[2]}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+            <Card sx={{ maxWidth: 345 }} className={styles.card}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={`https://image.tmdb.org/t/p/w500/${img[1]}`}
+                  alt="photo1"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5">
+                    {title[1]}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+            <Card sx={{ maxWidth: 345 }} className={styles.card}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={`https://image.tmdb.org/t/p/w500/${img[2]}`}
+                  alt="photo1"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" >
+                    {title[2]}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </div>
+        </div>
       </div>
     </div>
   );
