@@ -28,7 +28,6 @@ const HomePage = () => {
       const data = await ApiUtil.getPeople();
       setTrendPeople(data);
     }
-    console.log(trendMovie);
     people();
     serial();
     movie();
@@ -37,26 +36,26 @@ const HomePage = () => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.category}> All</div> 
-      <div className={styles.main}>
+      <div className={styles.category}> All</div>
+      <SwiperCard>
         {all?.results?.map((all) => (
           <HomePageCard key={all.id} trend={all} />
         ))}
       </SwiperCard>
       <div className={styles.category}> Movie</div>
-      <div div className={styles.main}>
+      <SwiperCard>
         {trendMovie?.results?.map((movie) => (
           <HomePageCard key={movie.id} trend={movie} />
         ))}
       </SwiperCard>
       <div className={styles.category}> Serial</div>
-      <div div className={styles.main}>
+      <SwiperCard>
         {trendSerial?.results?.map((serial) => (
           <HomePageCard key={serial.id} trend={serial} />
         ))}
       </SwiperCard>
       <div className={styles.category}> People</div>
-      <div div className={styles.main}>
+      <SwiperCard>
         {trendPeople?.results?.map((people) => (
           <HomePageCard key={people.id} trend={people} />
         ))}

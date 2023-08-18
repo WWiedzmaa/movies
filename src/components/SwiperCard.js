@@ -1,17 +1,25 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
+import "./SwiperCard.css";
+import { Pagination } from "swiper/modules";
 
 const SwiperCard = (props) => {
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
-    >
-      {props.children}
-    </Swiper>
+    <>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>{props.children}</SwiperSlide>
+      </Swiper>
+    </>
   );
 };
 

@@ -13,6 +13,7 @@ const CardPersons = ({ person }) => {
   return (
     <div>
       <Link
+        className={styles.link}
         to={`/person/${person.id + "-" + person.name.replaceAll(" ", "-")}`}
         state={{ obj: person }}
       >
