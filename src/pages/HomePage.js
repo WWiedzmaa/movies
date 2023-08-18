@@ -27,12 +27,12 @@ const HomePage = () => {
       const data = await ApiUtil.getPeople();
       setTrendPeople(data);
     }
-    console.log(trendMovie);
     people();
     serial();
     movie();
     all();
   }, []);
+   
 
   return (
     <div className={styles.root}>
