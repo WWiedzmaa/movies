@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  max-width: 40%;
+  max-height: 40%;
+}
+
+.photo {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.films {
+  display: flex;
+  flex-direction: column;
+}
