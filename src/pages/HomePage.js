@@ -42,7 +42,7 @@ const HomePage = () => {
     <div className={styles.root}>
       <div className={styles.category}> All</div>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={5}
         spaceBetween={30}
         pagination={{
           clickable: true,
@@ -57,9 +57,9 @@ const HomePage = () => {
         ))}
       </Swiper>
 
-      {/* <div className={styles.category}> Movie</div>
+      <div className={styles.category}> Movie</div>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={5}
         spaceBetween={30}
         pagination={{
           clickable: true,
@@ -76,7 +76,7 @@ const HomePage = () => {
 
       <div className={styles.category}> Serial</div>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={5}
         spaceBetween={30}
         pagination={{
           clickable: true,
@@ -94,7 +94,7 @@ const HomePage = () => {
       <div className={styles.category}> People</div>
 
       <Swiper
-        slidesPerView={3}
+        slidesPerView={5}
         spaceBetween={30}
         pagination={{
           clickable: true,
@@ -107,7 +107,7 @@ const HomePage = () => {
             <HomePageCard trend={people} />
           </SwiperSlide>
         ))}
-      </Swiper> */}
+      </Swiper>
     </div>
   );
 };

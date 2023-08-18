@@ -28,3 +28,8 @@ code {
   padding: 10px;
   padding-bottom: 180px;
 }
+.swiper {
+  margin-left: initial !important;
+  margin-right: initial !important;
+}
+
