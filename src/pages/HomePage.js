@@ -3,7 +3,10 @@ import React, { useEffect, useState } from "react";
 import HomePageCard from "../components/home/HomePageCard";
 import ApiUtil from "./../hooks/ApiUtil";
 import styles from "./HomePage.module.css";
-import SwiperCard from "../components/SwiperCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
 
 const HomePage = () => {
   const [all, setAll] = useState(null);
@@ -38,29 +41,73 @@ const HomePage = () => {
   return (
     <div className={styles.root}>
       <div className={styles.category}> All</div>
-      <SwiperCard>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
         {all?.results?.map((all) => (
-          <HomePageCard key={all.id} trend={all} />
+          <SwiperSlide key={all.id}>
+            <HomePageCard trend={all} />
+          </SwiperSlide>
         ))}
-      </SwiperCard>
-      <div className={styles.category}> Movie</div>
-      <SwiperCard>
+      </Swiper>
+
+      {/* <div className={styles.category}> Movie</div>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
         {trendMovie?.results?.map((movie) => (
-          <HomePageCard key={movie.id} trend={movie} />
+          <SwiperSlide key={movie.id}>
+            <HomePageCard trend={movie} />
+          </SwiperSlide>
         ))}
-      </SwiperCard>
+      </Swiper>
+
       <div className={styles.category}> Serial</div>
-      <SwiperCard>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
         {trendSerial?.results?.map((serial) => (
-          <HomePageCard key={serial.id} trend={serial} />
+          <SwiperSlide key={serial.id}>
+            <HomePageCard trend={serial} />
+          </SwiperSlide>
         ))}
-      </SwiperCard>
+      </Swiper>
+
       <div className={styles.category}> People</div>
-      <SwiperCard>
+
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
         {trendPeople?.results?.map((people) => (
-          <HomePageCard key={people.id} trend={people} />
+          <SwiperSlide key={people.id}>
+            <HomePageCard trend={people} />
+          </SwiperSlide>
         ))}
-      </SwiperCard>
+      </Swiper> */}
     </div>
   );
 };
