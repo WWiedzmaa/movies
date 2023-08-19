@@ -17,6 +17,7 @@ import PrivacyPolitycy from "./pages/Footers/PrivacyPolitycy";
 import "./index.css";
 import SearchResoult from "./pages/SearchResoult";
 import { CardOnePerson } from "./pages/CardOnePerson";
+import MyProfile from "./pages/MyProfile";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/privacyPolicy" element={<PrivacyPolitycy />} />
             <Route path="/serch/:id" element={<SearchResoult />} />
             <Route path="/person/:id" element={<CardOnePerson />} />
+            <Route path="/userprofile/:nick" element={<MyProfile />} />
           </Routes>
         </div>
         <Footer />
