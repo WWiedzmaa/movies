@@ -16,7 +16,7 @@ body {
   min-height: 100%;
   min-width: 100%;
   position: relative;
-  margin-right: ;
+
 }
 
 code {
@@ -27,6 +27,8 @@ code {
 .middle {
   padding: 10px;
   padding-bottom: 180px;
+  background-color: rgba(129, 98, 214, 0.623);
+  min-height: 600px;
 }
 .swiper {
   margin-left: initial !important;

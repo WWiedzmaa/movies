@@ -3,11 +3,17 @@
     height: 300px;
     margin: 10px 10px;
 }
+.main div{
+  background-color: rgb(156, 130, 228);
+}
 .text {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-align: justify;
+    min-height: 80px;
+    
   }
   .name{
     font-size: 20px;

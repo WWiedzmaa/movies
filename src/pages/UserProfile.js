@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import styles from "./UserProfilr.module.css";
 
 const UserProfile = () => {
   const [user, setUser] = useState({
@@ -20,16 +21,18 @@ const UserProfile = () => {
 
   console.log(user);
   return (
-    <div>
+    <div className={styles.root}>
       <h2>Zaloguj się:</h2>
       <form>
         <input name="email" placeholder="Email" />
         <br />
-        <input name="password" placeholder="Password" />
+        <input name="password" placeholder="Password"  type="password"/>
         <br />
-        <button type="submit">Zaloguj</button>
+        <Link to={`/userprofile/${user.nick}`} state={{ obj: user }} className={styles.link}>
+          Zaloguj
+        </Link>
       </form>
-      <h2>lub zarejestruj</h2>
+      <h2>Zarejestruj się :</h2>
       <form onSubmit={updateUser}>
         <input
           name="firstname"
@@ -60,13 +63,14 @@ const UserProfile = () => {
         />
         <br />
         <input
+        type="password"
           name="password"
           onChange={updateUser}
           value={user.password}
           placeholder="Password"
         />
         <br />
-        <Link to={`/userprofile/${user.nick}`} state={{ obj: user }}>
+        <Link to={`/userprofile/${user.nick}`} state={{ obj: user }} className={styles.link}>
           Zarejestruj
         </Link>
       </form>

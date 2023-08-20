@@ -3,15 +3,13 @@
   flex-direction: column;
 }
 
-
-
 .photo {
   display: flex;
   flex-direction: row-reverse;
 }
-.photo img{
-width: 700px;
-border-radius: 7px;
+.photo img {
+  width: 700px;
+  border-radius: 7px;
 }
 
 .name {
@@ -19,36 +17,36 @@ border-radius: 7px;
   flex-direction: column;
   text-align: center;
   font-size: 30px;
-    font-weight: bold;
-font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-color: rgba(31, 13, 53, 0.767);
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgba(31, 13, 53, 0.767);
 }
-.films h2{
+
+.films h2 {
   font-size: 30px;
   font-weight: bold;
-font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-color: rgba(31, 13, 53, 0.767); 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgba(31, 13, 53, 0.767);
 }
 .films {
   display: flex;
   flex-direction: column;
 }
-.main{
+.main {
   display: flex;
 }
 
-.position{
+.position {
   margin-left: 20px;
   padding: 10px;
 }
 
-.card{
+.card {
   margin: 10px;
 }
-.card h5{
+.card h5 {
   font-size: 30px;
   font-weight: bold;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: rgba(31, 13, 53, 0.767); 
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgba(31, 13, 53, 0.767);
 }
-

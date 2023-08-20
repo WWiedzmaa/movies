@@ -42,8 +42,8 @@ const HomePage = () => {
     <div className={styles.root}>
       <div className={styles.category}> All</div>
       <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
+        slidesPerView={6}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
@@ -51,7 +51,7 @@ const HomePage = () => {
         className="mySwiper"
       >
         {all?.results?.map((all) => (
-          <SwiperSlide key={all.id}>
+          <SwiperSlide key={all.id} className={styles.slide}>
             <HomePageCard trend={all} />
           </SwiperSlide>
         ))}
@@ -59,8 +59,8 @@ const HomePage = () => {
 
       <div className={styles.category}> Movie</div>
       <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
+        slidesPerView={6}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
@@ -68,7 +68,7 @@ const HomePage = () => {
         className="mySwiper"
       >
         {trendMovie?.results?.map((movie) => (
-          <SwiperSlide key={movie.id}>
+          <SwiperSlide key={movie.id} className={styles.slide}>
             <HomePageCard trend={movie} />
           </SwiperSlide>
         ))}
@@ -76,16 +76,17 @@ const HomePage = () => {
 
       <div className={styles.category}> Serial</div>
       <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
+        slidesPerView={6}
+        spaceBetween={20}
         pagination={{
           clickable: true,
+
         }}
         modules={[Pagination]}
         className="mySwiper"
       >
         {trendSerial?.results?.map((serial) => (
-          <SwiperSlide key={serial.id}>
+          <SwiperSlide key={serial.id} className={styles.slide}>
             <HomePageCard trend={serial} />
           </SwiperSlide>
         ))}
@@ -94,8 +95,8 @@ const HomePage = () => {
       <div className={styles.category}> People</div>
 
       <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
+        slidesPerView={6}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
@@ -103,7 +104,7 @@ const HomePage = () => {
         className="mySwiper"
       >
         {trendPeople?.results?.map((people) => (
-          <SwiperSlide key={people.id}>
+          <SwiperSlide key={people.id} className={styles.slide} >
             <HomePageCard trend={people} />
           </SwiperSlide>
         ))}

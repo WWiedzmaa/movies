@@ -57,19 +57,19 @@ const Header = () => {
         </Link>
       </div>
       <div className={styles.links}>
-        <Link to={""} className={styles.link}>
+        <Link to={""}>
           Home Page
         </Link>
-        <Link to={"/movies"} className={styles.link}>
+        <Link to={"/movies"} >
           Movies
         </Link>
-        <Link to={"/serials"} className={styles.link}>
+        <Link to={"/serials"} >
           Serials
         </Link>
-        <Link to={"/persons"} className={styles.link}>
+        <Link to={"/persons"} >
           Persons
         </Link>
-        <Link to={"userprofile"} className={styles.link}>
+        <Link to={"userprofile"}>
           User Profile
         </Link>
       </div>

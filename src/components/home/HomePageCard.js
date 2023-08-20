@@ -12,14 +12,14 @@ const HomePageCard = ({ trend }) => {
       case "movie":
         return (
           <div>
-            <div>{trend.release_date}</div>
+            <div><b>{trend.release_date}</b></div>
             <div>{trend.overview}</div>
           </div>
         );
       case "tv":
         return (
           <div>
-            <div>{trend.first_air_date}</div>
+            <div><b>{trend.first_air_date}</b></div>
             <div>{trend.overview}</div>
           </div>
         );
@@ -49,8 +49,10 @@ const HomePageCard = ({ trend }) => {
             }`}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div" className={styles.name}>
+            <Typography>
+            <div className={styles.name}>
               {trend.name ?? trend.title}
+              </div>
             </Typography>
             <Typography variant="body2" color="text.secondary">
               <span className={styles.text}>{detals()}</span>

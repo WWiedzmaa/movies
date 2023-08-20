@@ -1,0 +1,41 @@
+.root{
+  margin: 15px;
+}
+
+.root h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgba(31, 13, 53, 0.767);
+}
+
+.root input {
+  background-color: transparent;
+  border-radius: 8px;
+  width: 300px;
+  height: 35px;
+  margin-bottom: 10px;
+  border-color: rgba(31, 13, 53, 0.767);
+  outline: none;
+  border: solid 1px rgb(50 38 83 / 60%);
+}
+.root input :hover {
+  border: solid 1px rgb(50 38 83 / 80%);
+  font-size: 20px;
+}
+.root input::placeholder {
+  color: rgb(50, 38, 83) !important;
+}
+.link {
+  text-decoration: none;
+  color: rgba(31, 13, 53, 0.767);
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: underline; 
+}
+.link:hover {
+    margin: 12px 12px;
+    text-decoration: underline;
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
