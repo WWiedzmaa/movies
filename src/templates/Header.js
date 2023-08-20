@@ -5,11 +5,14 @@ import CameraRollIcon from "@mui/icons-material/CameraRoll";
 import { Input } from "./../components/Input";
 import SearchIcon from "@mui/icons-material/Search";
 import SearchList from "../components/SearchList";
+import Carousel from "react-material-ui-carousel";
+import ApiUtil from "../hooks/ApiUtil";
 
 const Header = () => {
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
+  const [movie, setmMovie] = useState(null);
 
   const [isVisible, setIsVisible] = useState(true); // kliknięcie na zwenątrz - stan
   const myRef = useRef(); // referencja do przycisku - button
@@ -21,7 +24,14 @@ const Header = () => {
       setIsVisible(false);
     }
   };
-
+  useEffect(() => {
+    async function movie() {
+      const data = await ApiUtil.getMovies();
+      setmMovie(data);
+    }
+    movie();
+  }, []);
+  console.log(movie);
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
@@ -50,45 +60,53 @@ const Header = () => {
     setQuery("");
   };
   return (
-    <div className={styles.root}>
-      <div className={styles.logo}>
-        <Link to="/">
-          <CameraRollIcon /> <div className={styles.span}>Movies</div>
-        </Link>
+    <div className={styles.main}>
+      <div className={styles.root}>
+        <div className={styles.logo}>
+          <Link to="/">
+            <CameraRollIcon /> <div className={styles.span}>Movies</div>
+          </Link>
+        </div>
+        <div className={styles.links}>
+          <Link to={""}>Home Page</Link>
+          <Link to={"/movies"}>Movies</Link>
+          <Link to={"/serials"}>Serials</Link>
+          <Link to={"/persons"}>Persons</Link>
+          <Link to={"userprofile"}>User Profile</Link>
+        </div>
       </div>
-      <div className={styles.links}>
-        <Link to={""}>
-          Home Page
-        </Link>
-        <Link to={"/movies"} >
-          Movies
-        </Link>
-        <Link to={"/serials"} >
-          Serials
-        </Link>
-        <Link to={"/persons"} >
-          Persons
-        </Link>
-        <Link to={"userprofile"}>
-          User Profile
-        </Link>
-      </div>
-      <div ref={myRef} className={styles.list}>
-        <Input
-          onClick={() => setIsVisible(true)}
-          placeholder="szukaj"
-          onChange={(e) => setQuery(e.target.value)}
-          value={query}
-          className={styles.input}
-        />
-        <p className={styles.search}>
-          <SearchIcon />
-        </p>
-        {isVisible && (
-          <div className={styles.listAbsolut}>
-            <SearchList clean={clean} value={data} />
+      <div className={styles.carusel}>
+        <Carousel
+          indicators={false}
+          stopAutoPlayOnHover={false}
+        >
+          {movie?.results?.map((movie) => (
+            <div key={movie.id} className={styles.caruselImg}>
+              <img
+                src={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`}
+              />
+            </div>
+          ))}
+        </Carousel>
+        <div className={styles.searchBnt}>
+          <div ref={myRef} className={styles.list}>
+            <Input
+              onClick={() => setIsVisible(true)}
+              placeholder="szukaj"
+              onChange={(e) => setQuery(e.target.value)}
+              value={query}
+              className={styles.input}
+            />
+            <p className={styles.search}>
+              <SearchIcon />
+            </p>
+            {isVisible && (
+              <div className={styles.listAbsolut}>
+                <SearchList clean={clean} value={data} />
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
