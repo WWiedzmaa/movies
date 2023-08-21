@@ -1,8 +1,9 @@
 import axios from "axios";
+import { React } from 'react';
 
 class ApiUtil {
   static baseUrl = "https://api.themoviedb.org/3/";
-  static apiKey = "5219cb6186dc8cdfa863dcdc035f17f8";
+  static apiKey = process.env.REACT_APP_API_KEY;
   static async getAll() {
     try {
       const response = await axios.get(`${this.baseUrl}trending/all/day`, {
