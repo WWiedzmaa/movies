@@ -64,7 +64,7 @@ const Header = () => {
       <div className={styles.root}>
         <div className={styles.logo}>
           <Link to="/">
-            <CameraRollIcon /> <div className={styles.span}>Movies</div>
+            <CameraRollIcon /> <div className={styles.span}>Movies :</div>
           </Link>
         </div>
         <div className={styles.links}>
